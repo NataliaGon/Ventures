@@ -84,12 +84,13 @@ body {
 .spring-text, .fattal-text{
     margin-top: 29px;
 }
-.spring-text{
+.spring-text {
     padding-right: 6.3vw;
 }
-/* .fattal-partner{
+.fattal-text, .fattal-partner img{
     padding-left: 6.3vw;
-} */
+}
+
 .name-title{
     font-family: 'Open Sans';
     font-size: 3.5rem;
@@ -170,9 +171,10 @@ footer{
     .sections-contents{
         flex: 0 0 100%;
     } 
-    .contacts,.spring-text,
-    /* .fattal-partner */
-    {
+    .person-wrapper{
+        width: 100%;
+    }
+    .contacts,.spring-text,.fattal-text, .fattal-partner img{
         padding-left: unset;
     }
 }
