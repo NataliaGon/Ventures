@@ -94,6 +94,11 @@ input{
     border: none;
     border-bottom:1px solid black; 
     height: 100px;
+    font-size: 1.8rem;
+}
+textarea{
+    border:1px solid black;
+    font-size: 1.8rem; 
 }
 .contacts{
     padding-left: 6.3vw;
@@ -112,6 +117,15 @@ footer{
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 0.9px;
+    margin-top: 174px;
+}
+.form-text{
+    color: #464646;
+}
+.btn-submit{
+    color: white;
+    background: black;
+    margin-top: 44px;
 }
 @media only screen and (max-width: 1024px) {
     .section{
