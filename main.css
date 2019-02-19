@@ -124,7 +124,7 @@ body {
     width: 100%;
     max-width: 598px;
 }
-.person-img{
+.person-img, .not-active{
     width: 100%;
     max-width: 598px;
     align-self: center;
@@ -135,7 +135,7 @@ body {
     border-bottom: 14px solid #cdffcc;
 }
 .text-about-person{
-    
+
 }
 input{
     outline: none;
