@@ -131,6 +131,8 @@ body {
     border-bottom: 14px solid #cdffcc;
 }
 .not-active{
+    width: 100%;
+    max-width: 598px;
     display: none;
     border-bottom: 14px solid #cdffcc;
 }
