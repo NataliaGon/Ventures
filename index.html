@@ -12,10 +12,14 @@
 </head>
 
 <body>
-    <section class="welcome-section section margin-sides">
+    <section class="welcome-section section">
         <img class="logo" src="img/journey.svg">
         <span class="welcome-text">Invest in industry changing ideas
             is our goal</span>
+            <video id="video" muted autoplay>
+                    <source src="Comp.mp4"
+                    type="video/webm">
+            </video>
     </section>
     <div class="clouds-mob"></div>
     <section class="we-are section">
@@ -56,7 +60,8 @@
                 <img class="not-active" src="img/nadav-hover.jpg" data-id="1">
                 <span class="name-title">Nadav Fattal</span> <br>
                 <span class="position-title">CEO at Fattal Hotels</span>
-                <div class="text-about-person text-block" data-id="1">Our investment objective is to seek a long-term capital appreciation by
+                <div class="text-about-person text-block" data-id="1">Our investment objective is to seek a long-term
+                    capital appreciation by
                     investing in a diversified portfolio, while taking advantage of technology-based platforms, global
                     market trends and our expertise.</div>
             </div>
@@ -67,36 +72,42 @@
                 <img class="not-active" src="img/aviv-hover.jpg" data-id="2">
                 <span class="name-title">Aviv Refuah</span> <br>
                 <span class="position-title">Founder & CEO at Spring Venture</span>
-                <div class="text-about-person text-block" data-id="2">Our investment objective is to seek a long-term capital appreciation by
-                        investing in a diversified portfolio, while taking advantage of technology-based platforms, global
-                        market trends and our expertise.</div>
+                <div class="text-about-person text-block" data-id="2">Our investment objective is to seek a long-term
+                    capital appreciation by
+                    investing in a diversified portfolio, while taking advantage of technology-based platforms, global
+                    market trends and our expertise.</div>
             </div>
         </div>
     </section>
-    <span class="title margin-sides">For further info, contact us:</span>
+    <span class="title margin-sides more-info-title">For further info, contact us:</span>
     <section class="contact-us margin-sides section">
         <div class="form sections-contents">
 
             <span class="text-block form-text">Fill in your details and we'll be happy to call you:
             </span>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Phone Number">
-            <input type="text" placeholder="Email">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Massage"></textarea>
-            <input class="btn-submit" type="submit">
-
+            <form method="POST" action="acknowledge.php">
+            <!-- <form method="POST" action="https://formspree.io/journeyventures2019@gmail.com">
+                <div class="hpot">
+                    <label>Leave this field empty: <input name="_gotcha"></label>
+                  </div> -->
+                <input for="name" type="text" placeholder="Name"> <br>
+                <input for="phone" type="text" placeholder="Phone Number"> <br>
+                <input for="email" type="text" placeholder="Email"> <br>
+                <textarea for="comments" name="" id="" cols="30" rows="10" placeholder="Massage"></textarea> <br>
+                <input class="btn-submit" type="submit">
+                <!-- <input type="hidden" name="_next" value="https://mysite.com/thanks.html"/> -->
+            </form>
         </div>
         <div class="contacts sections-contents">
             <span class="text-block contact-us-text">
                 We are also available at: <br>
-                +972547839276<br>
-                72nd street, City name <br>
-                Journey@gmail.com <br>
+                +97235434060<br>
+                94 Yigal Alon st. Tel Aviv 6789156, Israel <br>
+                contact@journey-ventures.com<br>
                 <img src="img/facebook.svg">
                 <img src="img/linkedin.svg">
             </span>
         </div>
-
     </section>
     <footer>
         © All rights reserved Journey Venture 2019
