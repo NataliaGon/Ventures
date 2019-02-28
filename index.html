@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -15,25 +15,30 @@
     <section class="welcome-section section">
         <img class="logo" src="img/journey.svg">
         <span class="welcome-text">Leading travel tech companies on a journey to success</span>
-            <video id="video" muted autoplay>
-                    <source src="Comp.mp4"
-                    type="video/webm">
-            </video>
+        <video id="video" muted autoplay>
+            <source src="Comp.mp4" type="video/webm">
+        </video>
+        <div class="clouds-mob"></div>
     </section>
-    <div class="clouds-mob"></div>
+
     <section class="we-are section">
-        <!-- <img class="img-for-mob" src="img/small.svg"> -->
-        <span class="we-are-text sections-contents text-block">We're an innovative VC fund firm specialized in travel
-            tech and
-            looking for our next
-            exciting
-            entrepreneurial journey, Investing at the center of travel tech. We gives curious founders the resources
-            required to build strong companies.</span>
+        <div class="we-are-text  text-block">
+           <div> <img class="img-for-mob" src="img/small.svg"></div>
+            <p>
+           We're an innovative VC fund firm specialized in
+                travel
+                tech and
+                looking for our next
+                exciting
+                entrepreneurial journey, Investing at the center of travel tech. We gives curious founders the resources
+                required to build strong companies.
+            </p>
+        </div>
         <div class="we-are-img-container sections-contents">
             <img class="we-are-img" src="img/office.jpg">
         </div>
     </section>
-    <span class="title margin-sides">Partners</span>
+    <span class="title margin-sides">PARTNERS</span>
     <section class="partners margin-sides section">
 
         <div class="spring-partner sections-contents">
@@ -51,7 +56,7 @@
             </span>
         </div>
     </section>
-    <span class="title margin-sides">Our team</span>
+    <span class="title margin-sides">OUR TEAM</span>
     <section class="our-team margin-sides section">
         <div class="person-wrapper sections-contents" id="js-nadav" data-id="1">
             <div class="nadav">
@@ -79,7 +84,7 @@
         </div>
     </section>
     <span class="title margin-sides more-info-title">For further info, contact us:</span>
-    <section class="contact-us margin-sides section">
+    <section class=" margin-sides section">
         <div class="form sections-contents">
 
             <span class="text-block form-text">Fill in your details and we'll be happy to call you:
@@ -92,9 +97,9 @@
                 <input for="name" type="text" placeholder="Name" name="name"> <br>
                 <input for="phone" type="text" placeholder="Phone Number" name="phone"> <br>
                 <input for="email" type="text" placeholder="Email" name="email"> <br>
-                <textarea for="comments"  cols="30" rows="10" placeholder="Massage" name="massage"></textarea> <br>
+                <textarea for="comments" cols="30" rows="10" placeholder="Massage" name="massage"></textarea> <br>
                 <input class="btn-submit" type="submit">
-                <input type="hidden" name="_next" value="formSuccess.html"/>
+                <input type="hidden" name="_next" value="formSuccess.html" />
             </form>
         </div>
         <div class="contacts sections-contents">
@@ -104,7 +109,7 @@
                 94 Yigal Alon st. Tel Aviv 6789156, Israel <br>
                 contact@journey-ventures.com<br>
                 <img src="img/facebook.svg">
-                <img src="img/linkedin.svg">
+                <img class="icon-linkedin" src="img/linkedin.svg">
             </span>
         </div>
     </section>

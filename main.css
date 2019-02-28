@@ -1,5 +1,5 @@
 /* Main */
-html{
+html {
   font-size: 10px;
 }
 body {
@@ -39,6 +39,7 @@ body {
   display: inline-block;
   margin-top: 9.8vw;
   margin-bottom: 5.7vw;
+  background-size: contain;
 }
 
 /* Sections */
@@ -57,8 +58,9 @@ body {
   margin-top: 15vw;
   background: url("img/hero.svg") no-repeat center;
   position: absolute;
-  top: 50px;
+  top: 100px;
   padding: 0 330px;
+  background-size: contain;
 }
 .logo {
   margin-top: 46px;
@@ -84,15 +86,16 @@ body {
   font-size: 2.6rem;
   box-sizing: border-box;
   font-family: "Ubuntu";
+  line-height: 1.54;
 }
 .we-are-img-container {
   align-items: center;
 }
-.img-for-mob {
+/* .img-for-mob {
   position: absolute;
   left: 110px;
   top: 123px;
-}
+} */
 .we-are-img {
   width: 49vw;
 }
@@ -123,13 +126,14 @@ body {
   font-size: 3.5rem;
   letter-spacing: 1.9px;
   color: #000000;
-  font-weight: bold;
+  font-weight: 700;
+  margin-top: 3.7rem;
+  display: inline-block;
 }
 .position-title {
   font-family: "Open Sans";
   font-size: 3rem;
   letter-spacing: 1.7px;
-  font-weight: bold;
 }
 .nadav,
 .aviv,
@@ -167,6 +171,9 @@ body {
 .form-text {
   margin-bottom: 50px;
 }
+.contact-us {
+  color: #464646;
+}
 input {
   outline: none;
   border: none;
@@ -174,21 +181,35 @@ input {
   height: 100px;
   font-size: 1.8rem;
   width: 100%;
-  font-family: "Open Sans";
+  /* font-family: "Open Sans"; */
+  color: #464646;
 }
 textarea {
   border: 1px solid black;
   font-size: 1.8rem;
   padding: 13px 0 0 13px;
   width: 100%;
-  font-family: "Open Sans";
+  /* font-family: "Open Sans"; */
   margin-top: 46px;
   box-sizing: border-box;
+  color: #464646;
+}
+:-moz-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder,
+:-moz-placeholder{
+  color: #464646;
+  /* font-family: "Open Sans"; */
 }
 .contacts {
   padding-left: 6.3vw;
 }
-
+.contact-us-text img {
+  margin-top: 5.2rem;
+}
+.icon-linkedin {
+  margin-left: 5.1rem;
+}
 footer {
   display: flex;
   height: 69px;
@@ -216,6 +237,7 @@ footer {
 }
 .contact-us-text {
   line-height: 6rem;
+  color: #464646;
 }
 @media only screen and (max-width: 1024px) {
   .section {
@@ -225,7 +247,7 @@ footer {
   .welcome-text {
     font-size: 5.3rem;
     padding: 0 100px;
-    background-size: 80%;
+    /* background-size: 80%; */
   }
   .sections-contents {
     flex: 0 0 100%;
@@ -251,18 +273,20 @@ footer {
     letter-spacing: 1px;
     padding-top: 30px;
   }
+
   .we-are-text {
     padding: 100px 29px 70px 31px;
   }
-  .img-for-mob {
+  /* .img-for-mob {
     left: 30px;
     top: 56px;
-  }
+  } */
   .clouds-mob {
     display: block;
     width: 100%;
     height: 600px;
     background: url("img/clouds.jpg") no-repeat;
+    background-size: 100%;
   }
   .partner-icon {
     padding-top: 50px;
@@ -288,6 +312,11 @@ footer {
     display: none;
   }
 }
+@media only screen and (max-width: 988px) {
+  .welcome-text {
+    margin-top: 140px;
+  }
+}
 @media only screen and (max-width: 612px) {
   .margin-sides {
     margin-left: 30px;
@@ -304,7 +333,11 @@ footer {
   .welcome-text {
     padding: 0 30px;
     font-size: 2.3rem;
-    margin-top: 150px;
+    margin-top: 100px;
+  }
+  .clouds-mob {
+    background-size: contain;
+    height: 300px;
   }
 }
 .hpot {
@@ -315,32 +348,31 @@ footer {
   margin-top: 10vw;
   text-align: center;
 }
-.success-container h1{
-    height: 30px;
-    font-family: Futura;
-    font-size: 23.4px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.3px;
-    color: #000000;
-
+.success-container h1 {
+  height: 30px;
+  font-family: Futura;
+  font-size: 23.4px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  color: #000000;
 }
-.success-container h2{
-    font-family: OpenSans;
-    font-size: 16.2px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.56;
-    letter-spacing: 0.9px;
-    text-align: center;
-    color: #464646;
+.success-container h2 {
+  font-family: OpenSans;
+  font-size: 16.2px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.56;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: #464646;
 }
-.success-container a{
-    font-size: 16.2px;
+.success-container a {
+  font-size: 16.2px;
 }
-.success-container  img{
-    width: 89px;
+.success-container img {
+  width: 89px;
 }
