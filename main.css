@@ -133,6 +133,7 @@ text-align: center;
 }
 .spring-text {
   padding-right: 6.3vw;
+  display: block;
 }
 .fattal-text,
 .fattal-partner img {
@@ -140,8 +141,8 @@ text-align: center;
   display: block;
   
 }
-.container-border-left{
-  border-left: 1px solid black;
+.container-border-right{
+  border-right: 1px solid black;
 }
 .text-about-person {
   display: none;
@@ -345,8 +346,8 @@ footer {
   video {
     display: none;
   }
-  .container-border-left{
-    border-left: none;
+  .container-border-right{
+    border-right: none;
   }
 }
 @media only screen and (max-width: 988px) {
@@ -374,9 +375,6 @@ footer {
   .clouds-mob {
     height: 300px;
   }
-}
-.hpot {
-  display: none;
 }
 .success-container {
   width: 100%;
