@@ -18,7 +18,7 @@ function openMoreInfo(){
     let clickedBoxId = event.target.dataset.id;
     if (event.target.classList.contains('active')) {
         event.target.classList.remove('active');
-        console.log(event.target);
+ 
         for (let i of photoBig) {
             if (i.dataset.id == clickedBoxId) {
                 i.style.display = "block";
@@ -36,7 +36,7 @@ function openMoreInfo(){
         }
     } else {
         
-        console.log(clickedBoxId);
+     
         for (let i of photoBig) {
             if (i.dataset.id == clickedBoxId) {
                 i.style.display = "none";

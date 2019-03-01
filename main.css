@@ -21,7 +21,6 @@ body {
 .section {
   display: flex;
 }
-
 .text-block {
   line-height: 1.56;
   letter-spacing: 1.4px;
@@ -42,12 +41,14 @@ body {
   background-size: contain;
 }
 
+
 /* Sections */
 .welcome-section {
   display: flex;
   flex-direction: column;
   min-height: 64.2vw;
 }
+
 .welcome-text {
   font-size: 7.2rem;
   font-weight: bold;
@@ -61,6 +62,21 @@ body {
   top: 100px;
   padding: 0 330px;
   background-size: contain;
+}
+.scroll-link{
+  position: absolute;
+  transform: rotate(90deg);
+  top: 80%;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.scroll-link >img{
+  transform: rotate(-90deg);
+}
+@media only screen and (min-width: 1873px) {
+  .welcome-text {
+    margin-top: 20vw;
+  }
 }
 .logo {
   margin-top: 46px;
@@ -91,11 +107,9 @@ body {
 .we-are-img-container {
   align-items: center;
 }
-/* .img-for-mob {
-  position: absolute;
-  left: 110px;
-  top: 123px;
-} */
+#video{
+  width: 100%;
+}
 .we-are-img {
   width: 49vw;
 }
@@ -117,6 +131,11 @@ body {
 .fattal-text,
 .fattal-partner img {
   padding-left: 6.3vw;
+  display: block;
+  
+}
+.container-border-left{
+  border-left: 1px solid black;
 }
 .text-about-person {
   display: none;
@@ -148,20 +167,21 @@ body {
 .nadav,
 .aviv {
   width: 100%;
-  max-width: 598px;
+  /* max-width: 598px; */
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .person-img,
 .not-active {
   width: 100%;
-  max-width: 598px;
+  /* max-width: 598px; */
   align-self: center;
   border-bottom: 14px solid #cdffcc;
 }
 .not-active {
   width: 100%;
-  max-width: 598px;
+  /* max-width: 598px; */
   display: none;
   border-bottom: 14px solid #cdffcc;
 }
@@ -181,6 +201,8 @@ input {
   height: 100px;
   font-size: 1.8rem;
   width: 100%;
+  letter-spacing: 1px;
+  font-weight: 100;
   /* font-family: "Open Sans"; */
   color: #464646;
 }
@@ -189,6 +211,8 @@ textarea {
   font-size: 1.8rem;
   padding: 13px 0 0 13px;
   width: 100%;
+  letter-spacing: 1px;
+  font-weight: 100;
   /* font-family: "Open Sans"; */
   margin-top: 46px;
   box-sizing: border-box;
@@ -218,7 +242,7 @@ footer {
   padding-left: 110px;
   align-items: center;
   font-size: 1.6rem;
-  font-family: "Open Sans";
+  /* font-family: "Open Sans"; */
   letter-spacing: 0.9px;
   margin-top: 174px;
 }
@@ -247,7 +271,6 @@ footer {
   .welcome-text {
     font-size: 5.3rem;
     padding: 0 100px;
-    /* background-size: 80%; */
   }
   .sections-contents {
     flex: 0 0 100%;
@@ -273,14 +296,15 @@ footer {
     letter-spacing: 1px;
     padding-top: 30px;
   }
-
+  .scroll-link{
+    display: none;
+  }
   .we-are-text {
     padding: 100px 29px 70px 31px;
   }
-  /* .img-for-mob {
-    left: 30px;
-    top: 56px;
-  } */
+  .aviv {
+  margin-top: 30px;
+  }
   .clouds-mob {
     display: block;
     width: 100%;
@@ -311,6 +335,9 @@ footer {
   video {
     display: none;
   }
+  .container-border-left{
+    border-left: none;
+  }
 }
 @media only screen and (max-width: 988px) {
   .welcome-text {
@@ -336,7 +363,6 @@ footer {
     margin-top: 100px;
   }
   .clouds-mob {
-    background-size: contain;
     height: 300px;
   }
 }
