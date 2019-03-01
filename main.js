@@ -15,43 +15,25 @@ function scroll() {
     
  }
 
-
-
-
-
-// nadav-clicked
-
-nadav.addEventListener('click', function () {
+// hover
+nadav.addEventListener('mouseenter', function () {
     openMoreInfo()
 
 });
-aviv.addEventListener('click', function () {
+aviv.addEventListener('mouseenter', function () {
     openMoreInfo()
 
 });
+nadav.addEventListener('mouseleave', function () {
+    closeMoreInfo()
 
+});
+aviv.addEventListener('mouseleave', function () {
+    closeMoreInfo()
+
+});
 function openMoreInfo() {
     let clickedBoxId = event.target.dataset.id;
-    if (event.target.classList.contains('active')) {
-        event.target.classList.remove('active');
-
-        for (let i of photoBig) {
-            if (i.dataset.id == clickedBoxId) {
-                i.style.display = "block";
-            }
-        }
-        for (let j of photoSmall) {
-            if (j.dataset.id == clickedBoxId) {
-                j.style.display = "none";
-            }
-        }
-        for (let k of text) {
-            if (k.dataset.id == clickedBoxId) {
-                k.style.display = "none";
-            }
-        }
-    } else {
-
 
         for (let i of photoBig) {
             if (i.dataset.id == clickedBoxId) {
@@ -69,6 +51,27 @@ function openMoreInfo() {
             if (k.dataset.id == clickedBoxId) {
                 k.style.display = "block";
             }
+        }
+    }
+
+
+function closeMoreInfo(){
+    let clickedBoxId = event.target.dataset.id;
+    event.target.classList.remove('active');
+
+    for (let i of photoBig) {
+        if (i.dataset.id == clickedBoxId) {
+            i.style.display = "block";
+        }
+    }
+    for (let j of photoSmall) {
+        if (j.dataset.id == clickedBoxId) {
+            j.style.display = "none";
+        }
+    }
+    for (let k of text) {
+        if (k.dataset.id == clickedBoxId) {
+            k.style.display = "none";
         }
     }
 }
