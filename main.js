@@ -3,6 +3,22 @@ const aviv = document.getElementById('js-aviv');
 const photoBig = document.getElementsByClassName('person-img');
 const photoSmall = document.getElementsByClassName('not-active');
 const text = document.getElementsByClassName('text-about-person');
+const scrollBtn = document.getElementsByClassName('scroll-link');
+const welcome =document.getElementsByClassName('welcome-section');
+const whereToScroll=document.getElementById('we-are');
+
+//Scroll
+scrollBtn[0].addEventListener('click', () => scroll());
+function scroll() {
+    const distanceToGo = whereToScroll.getBoundingClientRect().top;
+    window.scrollBy({ left: 0, top: distanceToGo, behavior: "smooth" });
+    
+ }
+
+
+
+
+
 // nadav-clicked
 
 nadav.addEventListener('click', function () {
@@ -14,11 +30,11 @@ aviv.addEventListener('click', function () {
 
 });
 
-function openMoreInfo(){
+function openMoreInfo() {
     let clickedBoxId = event.target.dataset.id;
     if (event.target.classList.contains('active')) {
         event.target.classList.remove('active');
- 
+
         for (let i of photoBig) {
             if (i.dataset.id == clickedBoxId) {
                 i.style.display = "block";
@@ -35,8 +51,8 @@ function openMoreInfo(){
             }
         }
     } else {
-        
-     
+
+
         for (let i of photoBig) {
             if (i.dataset.id == clickedBoxId) {
                 i.style.display = "none";
