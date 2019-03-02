@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
+
 
 <?php
  if (isset($_POST['sent'])){
@@ -22,5 +20,3 @@
   </head> 
   <body></body> 
 </html>  -->
-</body>
-</html>

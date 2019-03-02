@@ -1,3 +1,22 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "email@example.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Journey Ventures</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -41,12 +61,12 @@
             <img class="we-are-img" src="img/office.jpg">
         </div>
     </section>
-    <span class="title margin-sides">PARTNERS</span>
+    <span class="title margin-sides title-partners">PARTNERS</span>
     <section class="partners margin-sides section">
 
         <div class="spring-partner sections-contents">
             <div class="container-border-right">
-                <img class="partner-icon" src="img/spring.svg">
+                <img class="partner-icon partner-icon-spring" src="img/spring.svg">
                 <span class="spring-text text-block">
                     Our investment objective is to seek long-term capital appreciation by investing in a diversified
                     portfolio, while taking advantage of technology-based platforms, global market trends and our
@@ -62,7 +82,7 @@
         </div>
         <div class="fattal-partner sections-contents">
             <!-- <div class="container-border-left"> -->
-                <img class="partner-icon" src="img/fattal.jpg">
+                <img class="partner-icon partner-icon-fattal"  src="img/fattal.jpg">
                 <span class="fattal-text text-block">
                     Israel’s largest hospitality organization, with hotels distributed throughout the country.
                     With 190 hotels in 17 countries and as owners and managers of “Leonardo,” a leading European hotel
@@ -108,18 +128,27 @@
 
             <span class="text-block form-text">Fill in your details and we'll be happy to call you:
             </span>
-            <form method="POST" action="https://formspree.io/journeyventures2019@gmail.com">
-                <input for="name" type="text" placeholder="Name" name="name"> <br>
-                <input for="phone" type="text" placeholder="Phone Number" name="phone"> <br>
-                <input for="email" type="text" placeholder="Email" name="email"> <br>
-                <textarea for="comments" cols="30" rows="10" placeholder="Massage" name="massage"></textarea> <br>
-                <input class="btn-submit" type="submit">
-                <input type="hidden" name="_next" value="formSuccess.html" />
+            <h5 id="error">Form isn't valid</h5>
+            <h5 id="mail-error">Write correct email</h5>
+            <form  >
+            <!-- action="https://formspree.io/journeyventures2019@gmail.com" -->
+            <!-- method="POST" -->
+                
+                <textarea  class="small-textarea" id="name" for="name" type="text" placeholder="Name" name="name"></textarea> <br>
+                <textarea  class="small-textarea"  id="phone" for="phone" type="text" placeholder="Phone Number" name="phone"></textarea> <br>
+                <textarea  class="small-textarea"  id="mail" for="email" type="text" placeholder="Email" name="email"></textarea> <br>
+                <textarea id="message" for="comments" cols="30" rows="10" placeholder="Message" name="message"></textarea> <br>
+                <!-- <input > -->
+                <!-- <input type="hidden" name="_next" value="formSuccess.html" /> -->
             </form>
+            <button id="btn-form" class="btn-submit" type="submit"> Submit </button>
+            <h5 id="error">Form isn't valid</h5>
+            <h5 id="mail-error">Write correct email!</h5>
+            <h5 id="success">We got your information!</h5>
         </div>
         <div class="contacts sections-contents">
             <span class="text-block contact-us-text">
-                We are also available at: <br>
+               <span class="we-are-also"> We are also available at: </span> 
                 +97235434060<br>
                 94 Yigal Alon st. Tel Aviv 6789156, Israel <br>
                 contact@journey-ventures.com<br>
@@ -135,3 +164,5 @@
 </body>
 
 </html>
+
+
