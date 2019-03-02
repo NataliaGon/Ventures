@@ -277,6 +277,7 @@ footer {
   margin-top: 44px;
   font-size: 25px;
   height: 71px;
+      width: 100%;
 }
 .btn-submit:hover {
   background-color: #233223;
@@ -294,15 +295,31 @@ footer {
   color: red;
   font-size: 1.8rem;
   padding-bottom: 1rem;
+  border: 2px solid red;
+  margin: 5px;
+  padding: 5px;
 }
 #mail-error {
   display: none;
   color: red;
   font-size: 1.8rem;
+  border: 2px solid red;
+  margin: 5px;
+  padding: 5px;
+}
+#phone-error {
+  display: none;
+  color: red;
+  font-size: 1.8rem;
+  border: 2px solid red;
+  margin: 5px;
+  padding: 5px;
 }
 #success {
   display: none;
   color: green;
+   font-size: 1.8rem;
+   margin: 5px;
 }
 @media only screen and (max-width: 1024px) {
   .section {
