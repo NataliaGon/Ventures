@@ -1,5 +1,7 @@
 const nadav = document.getElementById('js-nadav');
 const aviv = document.getElementById('js-aviv');
+const animatedContainerNav = document.getElementsByClassName('animated-container-nadav');
+const textHidden = document.getElementsByClassName('text-about-person');
 const photoBig = document.getElementsByClassName('person-img');
 const photoSmall = document.getElementsByClassName('not-active');
 const text = document.getElementsByClassName('text-about-person');
@@ -15,70 +17,92 @@ function scroll() {
 
 }
 //click img mobile
+
 nadav.addEventListener('click', function () {
-    imgClick()
-});
-aviv.addEventListener('click', function () {
-    imgClick()
-});
-function imgClick(){
-    let clickedBoxId = event.target.dataset.id;
-    if (event.target.classList.contains('active')) {
-        event.target.classList.remove('active');
-
-        for (let i of photoBig) {
-            if (i.dataset.id == clickedBoxId) {
-                i.style.display = "block";
-            }
-        }
-        for (let j of photoSmall) {
-            if (j.dataset.id == clickedBoxId) {
-                j.style.display = "none";
-            }
-        }
-        for (let k of text) {
-            if (k.dataset.id == clickedBoxId) {
-                k.style.display = "none";
-            }
-        }
+    if (window.innerWidth < 1024) {
+    if (animatedContainerNav[0].classList.contains('moveUp')) {
+        animatedContainerNav[0].style.transform = "translateY(0)";
+        setTimeout(() => {
+            textHidden[0].style.opacity = '0.1';
+        }, 100);
+        setTimeout(() => {
+            textHidden[0].style.display = 'none';
+        }, 500);
+        setTimeout(() => {
+            animatedContainerNav[0].classList.remove('moveUp');
+        }, 700);
     } else {
-        
-        for (let i of photoBig) {
-            if (i.dataset.id == clickedBoxId) {
-                i.style.display = "none";
-            }
-        }
-        for (let j of photoSmall) {
-
-            if (j.dataset.id == clickedBoxId) {
-                j.classList.add('active');
-                j.style.display = "block";
-            }
-        }
-        for (let k of text) {
-            if (k.dataset.id == clickedBoxId) {
-                k.style.display = "block";
-            }
-        }
+        animatedContainerNav[0].style.transform = "translateY(-300px)"
+        animatedContainerNav[0].classList.add('moveUp');
+        setTimeout(() => {
+            textHidden[0].style.display = 'block';
+        }, 100);
+        setTimeout(() => {
+            textHidden[0].style.opacity = '1';
+        }, 200);
+        setTimeout(() => {
+            animatedContainerNav[0].classList.remove('moveDown')
+        }, 700);
     }
 }
-// hover
-nadav.addEventListener('mouseenter', function () {
-    openMoreInfo()
-
 });
+aviv.addEventListener('click', function () {
+    if (window.innerWidth < 1024) {
+    if (animatedContainerNav[1].classList.contains('moveUp')) {
+        animatedContainerNav[1].style.transform = "translateY(0)"
+        setTimeout(() => {
+            textHidden[1].style.opacity = '0.1';
+        }, 100);
+        setTimeout(() => {
+            textHidden[1].style.display = 'none';
+        }, 500);
+        setTimeout(() => {
+            animatedContainerNav[1].classList.remove('moveUp');
+        }, 700);
+    } else {
+        animatedContainerNav[1].style.transform = "translateY(-300px)"
+        animatedContainerNav[1].classList.add('moveUp');
+        setTimeout(() => {
+            textHidden[1].style.display = 'block';
+        }, 100);
+        setTimeout(() => {
+            textHidden[1].style.opacity = '1';
+        }, 200);
+        setTimeout(() => {
+            animatedContainerNav[1].classList.remove('moveDown')
+        }, 700);
+    }
+    }
+});
+
+
+
+
 aviv.addEventListener('mouseenter', function () {
-    openMoreInfo()
-
-});
-nadav.addEventListener('mouseleave', function () {
-    closeMoreInfo()
-
+    animatedContainerNav[1].style.transform = "translateY(-300px)"
+    setTimeout(() => {
+        textHidden[1].style.opacity = '1';
+    }, 200);
 });
 aviv.addEventListener('mouseleave', function () {
-    closeMoreInfo()
-
+        animatedContainerNav[1].style.transform = "translateY(0)"
+        setTimeout(() => {
+            textHidden[1].style.opacity = '0';
+        }, 100); 
 });
+nadav.addEventListener('mouseenter', function () {
+    animatedContainerNav[0].style.transform = "translateY(-300px)"
+    setTimeout(() => {
+        textHidden[0].style.opacity = '1';
+    }, 200);
+});
+nadav.addEventListener('mouseleave', function () {
+    animatedContainerNav[0].style.transform = "translateY(0)";
+    setTimeout(() => {
+        textHidden[0].style.opacity = '0';
+    }, 100);
+});
+
 function openMoreInfo() {
     let clickedBoxId = event.target.dataset.id;
 

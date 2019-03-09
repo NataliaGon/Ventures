@@ -147,7 +147,9 @@ body {
   border-right: 1px solid black;
 }
 .text-about-person {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.5s;
 }
 .name-title {
   font-family: "Open Sans", sans-serif;
@@ -176,9 +178,10 @@ body {
 .nadav,
 .aviv {
   width: 100%;
-  /* max-width: 598px; */
   margin-right: 10px;
   margin-left: 10px;
+  height: 50vw;
+  overflow: hidden;
 }
 
 .person-img,
@@ -186,7 +189,7 @@ body {
   width: 100%;
   /* max-width: 598px; */
   align-self: center;
-  border-bottom: 14px solid #cdffcc;
+  /* border-bottom: 14px solid #cdffcc; */
 }
 .not-active {
   width: 100%;
@@ -216,7 +219,7 @@ input {
   /* font-family: "Open Sans"; */
   color: #464646;
 }
-.small-textarea{
+.small-textarea {
   border: none;
   border-bottom: 1px solid black;
   padding: 30px 0 0 0;
@@ -240,11 +243,11 @@ textarea {
 ::-moz-placeholder,
 ::-webkit-input-placeholder,
 :-moz-placeholder,
-:-ms-input-placeholder  {
+:-ms-input-placeholder {
   color: #464646;
-  padding:40px 0 0 -40px; 
+  padding: 40px 0 0 -40px;
   line-height: 10px;
-  
+
   /* font-family: "Open Sans"; */
 }
 .contacts {
@@ -277,7 +280,7 @@ footer {
   margin-top: 44px;
   font-size: 25px;
   height: 71px;
-      width: 100%;
+  width: 100%;
 }
 .btn-submit:hover {
   background-color: #233223;
@@ -286,7 +289,7 @@ footer {
   line-height: 4rem;
   color: #464646;
 }
-.we-are-also{
+.we-are-also {
   display: block;
   padding-bottom: 20px;
 }
@@ -318,10 +321,24 @@ footer {
 #success {
   display: none;
   color: green;
-   font-size: 1.8rem;
-   margin: 5px;
+  font-size: 1.8rem;
+  margin: 5px;
 }
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1485px) {
+  .text-about-person {
+    font-size: 1.6rem;
+  }
+}
+@media  screen and (max-width: 1171px) {
+  .nadav,
+  .aviv {
+   height: 70vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .text-about-person {
+    font-size: 2.5rem;
+  }
   .section {
     flex-direction: column;
     height: auto;
@@ -349,7 +366,7 @@ footer {
     width: 100%;
   }
   .text-block {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     line-height: 1.56;
     letter-spacing: 1px;
     padding-top: 30px;
@@ -392,6 +409,7 @@ footer {
   .aviv {
     margin-right: unset;
     margin-left: unset;
+    height: 100vw;
   }
   video {
     display: none;
@@ -400,12 +418,17 @@ footer {
     border-right: none;
   }
 }
-@media only screen and (max-width: 988px) {
+@media  screen and (max-width: 988px) {
   .welcome-text {
     margin-top: 140px;
   }
 }
-@media only screen and (max-width: 612px) {
+@media  screen and (max-width: 888px) {
+  .text-about-person {
+    font-size:1.8rem;
+  }
+}
+@media screen and (max-width: 612px) {
   .logo-container img {
     width: 25%;
   }
@@ -443,20 +466,20 @@ footer {
   .fattal-text {
     margin-top: unset;
   }
-  .name-title{
+  .name-title {
     margin-top: 1.1rem;
   }
-  .aviv{
+  .aviv {
     margin-top: 50px;
   }
-  .more-info-title{
+  .more-info-title {
     margin-top: 70px;
   }
-  .form-text{
+  .form-text {
     padding-top: unset;
     margin-bottom: unset;
   }
-  input{
+  input {
     height: 85px;
   }
 }
@@ -492,4 +515,36 @@ footer {
 }
 .success-container img {
   width: 89px;
+}
+.nadav-photo {
+  background: url("img/nadav.png") no-repeat;
+  background-size: cover;
+  /* height: 40vw; */
+  width: 100%;
+  border-bottom: 14px solid #cdffcc;
+}
+.aviv-photo {
+  background: url("img/aviv.jpg") no-repeat;
+  background-size: cover;
+  /* height: 40vw; */
+  width: 100%;
+  border-bottom: 14px solid #cdffcc;
+}
+.active .text-about-person {
+  display: block;
+}
+.nadav-photo p,
+.aviv-photo p {
+  color: transparent;
+}
+.animated-container-nadav {
+  border-top: 14px solid #cdffcc;
+  transition: all 1s;
+  background-color: white;
+}
+.moveUp {
+  transform: translateY(-300px);
+}
+.moveDown {
+  transform: translateY(0);
 }
