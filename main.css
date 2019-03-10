@@ -548,3 +548,12 @@ footer {
 .moveDown {
   transform: translateY(0);
 }
+
+@media screen and (max-width: 505px) {
+.nadav,
+.aviv {
+  margin-right: unset;
+  margin-left: unset;
+  height: 120vw;
+}
+}
